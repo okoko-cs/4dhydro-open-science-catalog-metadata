@@ -1,0 +1,40 @@
+# Simple workflow for check test
+name: Validate csv content for deployment
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+  push:
+    branches-ignore: ["main"]
+
+      # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  pull-requests: read
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Fix timestamps
+      - name: restore timestamps
+        uses: chetan/git-restore-mtime-action@v1
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install git+https://github.com/okoko-cs/4dhydro-open-science-catalog-builder@main --no-cache-dir
+      - name: Convert csv to data
+        run: |
+          osc convert ./csv/Variables.csv ./csv/Themes.csv ./csv/"EO Missions".csv ./csv/Projects.csv ./csv/Products.csv -o data/
+      - name: Build static catalog
+        run: |
+          osc build data/ -o dist/ \
+            --root-href "https://okoko-cs.github.io/4dhydro-open-science-catalog-metadata/"
+          echo "build successfully"
+          dir dist/themes/atmosphere

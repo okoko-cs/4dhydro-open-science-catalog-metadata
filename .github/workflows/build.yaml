@@ -1,0 +1,81 @@
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to github page and store source file
+
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+  repository-projects: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      # Fix timestamps
+      - name: restore timestamps
+        uses: chetan/git-restore-mtime-action@v1
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Install dependencies
+        run: |
+          pip install -U pip
+          pip install git+https://github.com/okoko-cs/4dhydro-open-science-catalog-builder@main --no-cache-dir
+      - name: Convert csv to data
+        run: |
+          osc convert ./csv/Variables.csv ./csv/Themes.csv ./csv/"EO Missions".csv ./csv/Projects.csv ./csv/Products.csv -o data/
+      - name: Build static catalog
+        run: |
+          osc build data/ -o dist/ \
+            --root-href "https://okoko-cs.github.io/4dhydro-open-science-catalog-metadata/"
+      - name: Copying Catalog client
+        run: |
+          cp -r client/* dist/
+          chmod 755 -R dist
+      - name: Fix permissions
+        run: |
+          chmod -c -R +rX "dist/" | while read line; do
+            echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: 'dist'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
+      - name: Store source file on gh-page branch
+        run: |
+          git config user.name ${GITHUB_ACTOR}
+          git config user.email "olivier.koko@csgroup.eu"
+          git checkout -b gh-page
+          git add dist
+          git rm -rf --cached client
+          git rm -rf --cached csv
+          git rm -rf --cached images
+          git commit -m "${GITHUB_REF}-${GITHUB_RUN_ID} built files"
+          git push origin gh-page -f
+          echo "done !"
+
