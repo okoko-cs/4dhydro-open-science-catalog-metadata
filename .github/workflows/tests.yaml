@@ -37,4 +37,3 @@ jobs:
           osc build data/ -o dist/ \
             --root-href "https://okoko-cs.github.io/4dhydro-open-science-catalog-metadata/"
           echo "build successfully"
-          dir dist/themes/atmosphere
