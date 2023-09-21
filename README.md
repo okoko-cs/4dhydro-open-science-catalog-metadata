@@ -52,7 +52,7 @@ git merge main # transfers updates to your branch
 ```
 - Edit CSV metadata Templates
 
-Go to your workspace 4dhydo-open-science-catalog-metadata/csv you will see these different files then edit them in the following order: 
+Go to your workspace 4dhydro-open-science-catalog-metadata/csv you will see these different files then edit them in the following order: 
     - EO Missions.csv 
     - Themes.csv 
     - Variables.csv
@@ -60,6 +60,7 @@ Go to your workspace 4dhydo-open-science-catalog-metadata/csv you will see these
   
 Open files with Excel or any software that supports csv to edit template and add yours metadata.
 example Edit EO Missions.csv for adding new metadata relating to the missions from which the products are derived
+I suggest this link for easy editing of CSV (https://www.editcsvonline.com/)
 
 ![csv_template_sample.png](docs%2Fcsv_template_sample.png)
 
