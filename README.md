@@ -22,7 +22,14 @@ in order to fully understand the information that will be provided.
 
 ![metadata_class_diagram.png](docs%2Fmetadata_class_diagram.png)
 
-## How update/add metadata on catalogue 
+## Prerequisites
+
+To be able to contribute to the catalogue, you need to have these tools installed:
+- Have Git installed (https://git-scm.com/)
+- Have a GitHub account in order to participate in the project (https://github.com/)
+- A CSV editor (https://www.editcsvonline.com) 
+
+## How update/add metadata on STAC catalogue 
 
 - Clone 4DHydro GitHub project on your local workspace 
 ```bash
@@ -41,15 +48,14 @@ Nb: (replace <consortium> by name of the consortium ex: git checkout –b csgrou
 If you have already created your workspace, and you wish to add new data to the CSV template, don't forget to update your workspace with the main branch of a project using the command:
 ```bash
 git pull origin main # retrieves the latest updates from the main branch
-git rebase main # transfers these updates to your branch
+git merge main # transfers updates to your branch
 ```
 - Edit CSV metadata Templates
 
 Go to your workspace 4dhydo-open-science-catalog-metadata/csv you will see these different files then edit them in the following order: 
     - EO Missions.csv 
     - Themes.csv 
-    - Variables.csv 
-    - Projects.csv 
+    - Variables.csv
     - Products.csv
   
 Open files with Excel or any software that supports csv to edit template and add yours metadata.
