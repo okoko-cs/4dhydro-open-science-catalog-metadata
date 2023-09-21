@@ -1,2 +1,3 @@
 themes,link,variable,variable description
-Solid Earth,https://smap.jpl.nasa.gov/data/,Geothermal soil moisture,description of variable here is not required.
+Solid Earth,https://smap.jpl.nasa.gov/data/,Geothermal soil moisture,description of variable here .
+Atmosphere,,Evapotranspiration,description of variable here .
