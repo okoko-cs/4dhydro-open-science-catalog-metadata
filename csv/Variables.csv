@@ -16,7 +16,7 @@ applied to Sentinel-1 and ASCAT soil moisture products with GPM late Run satelli
 in mind the limitations of satellite soil moisture products over mountain areas and over snow/frozen soils.
 Therefore, the high-resolution (1 km , 1 day) rainfall product, based on EO data, will be developed and tested
 in the hydrological applications."
-Land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,discharge,"Deltares will leverage on Global Water Watch
+land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,discharge,"Deltares will leverage on Global Water Watch
 and related ESA Surface2Storage project. Within these projects high-resolution EO data is used to quantify
 surface water extent, level and volume, by combining data from sensors that can capture these types of dy-
 namics (e.g., Sentinel-2 for surface water extent, ICESat-2 for water levels), enhanced by in-situ measurements
@@ -25,7 +25,7 @@ and outflow, which in the case of large reservoirs is a critical component of th
 data can additionally be used for calibration and/or validation of the models, which is also the case for the
 river levels and discharge data that are also part of this task. In-situ measurements of this kind will be collected
 for all study areas and supported by EO datasets"
-Land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,irrigation,"In the ESA project Irrigation+, CNR, in collaboration with partners,
+land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,irrigation,"In the ESA project Irrigation+, CNR, in collaboration with partners,
 is exploring, developing and validating advanced Earth Observation-based algorithms and techniques for
 irrigation mapping, quantification and detection of seasonal timing of irrigation from field to regional/global
 scale. The project capitalizes on the advent of the European Space Agency (ESA) Sentinel missions in synergy
@@ -34,7 +34,7 @@ available at 1 km resolution for the Po and Ebro river basins [38, 54, 55]. Inde
 water product needs to be carefully checked before its use in large scale hydrological modelling. If successful,
 the integration of Irrigation+ and 4DHydro project results will constitute a ground-breaking result both in
 terms of scientific achievements and also for the operational management of water resources"
-Land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,total water storage ,"TUW will collect the satellite-based groundwater storage variations data generated within the H2020 project Global Gravity-based Groundwater Product (G3P, ht
+land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,total water storage ,"TUW will collect the satellite-based groundwater storage variations data generated within the H2020 project Global Gravity-based Groundwater Product (G3P, ht
 tps://www.g3p.eu/). A preliminary groundwater product shall be released by the end 2022. Along with the
 EO groundwater dataset, we will collect in-situ measurements of groundwater levels obtained from the In-
 ternational Groundwater Resources Assessment Centre (IGRAC, https://www.un-igrac.org/) and other site-
@@ -42,7 +42,7 @@ specific measurements when available. Simultaneously, we will collect total wate
 from GRACE, specifically the COST-G (International Combination Service for Time-variable Gravity Fields) prod-
 uct. It should be noted both remotely sensed products of groundwater storage and total water variations are
 only available at coarse spatial resolution."
-Land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,upstream area ,
+land,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,upstream area ,
 Oceans,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,mask,"CSGROUP has been in charge producing surface water masks at 10m resolution using either Sentinel 1 radar images, Sentinel 2 optical images or a combination of both. On Sentinel
 2 images clouds can be masked or removed using the MAJA algorithm [52, 53]. Single masks (at observation
 time) or monthly mean water masks (to reduced uncertainty) can be produced by this chain. In 4DHydro ,
