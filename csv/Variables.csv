@@ -3,8 +3,7 @@ Solid Earth,https://land.copernicus.eu/global/products/ssm,soil moisture,"Surfac
 SSM is a key driver of water and heat fluxes between the ground and the atmosphere, regulating air temperature and humidity. Moreover, in its role as water supply, it is vital to vegetation health. Vice versa, SSM is very sensitive to external forcing in the form of precipitation, temperature, solar irradiation, humidity, and wind. SSM is thus both an integrator of climatic conditions and a driver of local weather and climate, and plays a major role in global water-, energy- and carbon- cycles.
 Knowledge on the dynamics of soil moisture is important in the understanding of processes in many environmental and socio-economic fields, e.g., its impact on vegetation vitality, crop yield, droughts or exposure to flood threats. Soil Moisture is recognized as an Essential Climate Variable (ECV) by the Global Climate Observing System (GCOS).
 "
-Atmosphere,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,evapotranspiration ,"UFZ will collect the ECOsystem Spaceborne Thermal Radiometer Experiment on Space
-Station (ECOSTRESS) product, the MODIS global evapotranspiration product and other datasets gen-
+Atmosphere,https://4dhydro.eu/wp-content/uploads/2023/08/proposal_4dhydro.pdf,evapotranspiration ,"UFZ will collect the MODIS global evapotranspiration product and other datasets gen-
 erated for this project using the HOLAPS, ALEXI and DisALEXI models. Lower resolution products
 widely used in the literature, like the Global Land Evaporation Amsterdam Model (GLEAM) product, will
 be collected for comparison purposes. Additionally, evapotranspiration measurements from eddy covariance
