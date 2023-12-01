@@ -27,7 +27,6 @@ in order to fully understand the information that will be provided.
 To be able to contribute to the catalogue, you need to have these tools installed:
 - Have Git installed (https://git-scm.com/)
 - Have a GitHub account in order to participate in the project (https://github.com/)
-- Be registered on the project as a contributor. If not, please fill in your information here [ufz cloud ](https://nc.ufz.de/s/QpKy8TrQp9ykkaN?dir=undefined&path=%2FWP3&openfile=156241690) to be added.
 - A CSV editor (https://www.editcsvonline.com) 
 
 ## How update/add metadata on STAC catalogue 
@@ -35,7 +34,6 @@ To be able to contribute to the catalogue, you need to have these tools installe
 - Clone 4DHydro GitHub project on your local workspace 
 ```bash
 git clone https://github.com/okoko-cs/4dhydro-open-science-catalog-metadata.git 
-cd 4dhydro-open-science-catalog-metadata
 ```
 After cloning the project locally, you should have these files 
 
