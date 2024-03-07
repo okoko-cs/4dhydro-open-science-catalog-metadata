@@ -31,7 +31,7 @@ jobs:
           pip install git+https://github.com/okoko-cs/4dhydro-open-science-catalog-builder@main --no-cache-dir
       - name: Convert csv to data
         run: |
-          osc convert ./csv/Variables.csv ./csv/Themes.csv ./csv/"EO Missions".csv ./csv/Projects.csv ./csv/Products.csv -o data/
+          osc convert ./csv/Variables.csv ./csv/Themes.csv ./csv/"EO Missions".csv ./csv/Projects.csv ./csv/Products.csv ./csv/WP5_Tier2_Products.csv -o data/
       - name: Build static catalog
         run: |
           osc build data/ -o dist/ \
