@@ -59,6 +59,8 @@ Go to your workspace 4dhydro-open-science-catalog-metadata/csv you will see thes
     - Themes.csv 
     - Variables.csv
     - Products.csv
+    - WP5_Tier2_Products.csv
+    - Processes.csv
   
 Open files with Excel or any software that supports csv to edit template and add yours metadata.
 example Edit EO Missions.csv for adding new metadata relating to the missions from which the products are derived
