@@ -41,14 +41,14 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -U pip
-          pip install git+https://github.com/okoko-cs/4dhydro-open-science-catalog-builder@main --no-cache-dir
+          pip install git+https://github.com/4dhydro/4dhydro-open-science-catalog-builder@main --no-cache-dir
       - name: Convert csv to data
         run: |
-          osc convert ./csv/Variables.csv ./csv/Themes.csv ./csv/"EO Missions".csv ./csv/Projects.csv ./csv/Products.csv ./csv/WP5_Tier2_Products.csv ./csv/Processes.csv -o data/
+          osc convert ./csv/Variables.csv ./csv/Themes.csv ./csv/"EO Missions".csv ./csv/Projects.csv ./csv/WP1_Tier1_Products.csv ./csv/WP2_Tier1_Products.csv ./csv/WP5_Tier2_Products.csv ./csv/Processes.csv -o data/
       - name: Build static catalog
         run: |
           osc build data/ -o dist/ \
-            --root-href "https://okoko-cs.github.io/4dhydro-open-science-catalog-metadata/"
+            --root-href "https://opensciencedata.4dhydro.eu"
       - name: Copying Catalog client
         run: |
           cp -r client/* dist/
